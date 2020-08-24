@@ -1,9 +1,9 @@
 from django.urls import path
-from .views import item_list, home
+from .views import HomeView, ItemDetailView
 
 app_name = 'coreplatform'
 
 urlpatterns = [
-    path('', item_list, name="item-list"),
-    path('home/', home, name="home"),
+    path('', HomeView.as_view(), name="home"),
+    path('product/<slug>/', ItemDetailView.as_view(), name="product"),
 ]
