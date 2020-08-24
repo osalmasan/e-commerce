@@ -25,7 +25,6 @@ SECRET_KEY = env('SECRET_KEY')
 DEBUG = env('DEBUG')
 ALLOWED_HOSTS = ['*']
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -35,6 +34,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+
 ]
 
 MIDDLEWARE = [
@@ -120,6 +125,9 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 STATIC_ROOT = os.path.join(BASE_DIR, "static_root")
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+SITE_ID = 1
+
 
 if DEBUG is False:
     SESSION_COOKIE_SECURE = True
