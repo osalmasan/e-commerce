@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'crispy_forms',
 
     'coreplatform',
 
@@ -130,6 +131,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 if DEBUG is False:
     SESSION_COOKIE_SECURE = True
