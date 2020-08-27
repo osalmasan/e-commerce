@@ -78,6 +78,7 @@ def remove_from_cart(request, slug):
 
 class HomeView(ListView):
     model = Item
+    paginate_by = 10
     template_name = 'home.html'
 
 
