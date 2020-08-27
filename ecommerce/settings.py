@@ -129,7 +129,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 SITE_ID = 1
-
+LOGIN_REDIRECT_URL = '/'
 
 if DEBUG is False:
     SESSION_COOKIE_SECURE = True
