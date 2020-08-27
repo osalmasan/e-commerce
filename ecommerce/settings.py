@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'crispy_forms',
 
-    'coreplatform',
+    'coreplatform.apps.CoreplatformConfig',
 
 ]
 
